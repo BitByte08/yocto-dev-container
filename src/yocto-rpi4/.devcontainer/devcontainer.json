@@ -1,0 +1,33 @@
+{
+	"name": "Yocto + Raspberry Pi 4",
+	"build": {
+		"dockerfile": "Dockerfile"
+	},
+
+	// Configure tool-specific properties
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"ms-vscode.cpptools",
+				"eamodio.gitlens"
+			]
+		}
+	},
+
+	// Use 'postCreateCommand' to run commands after the container is created
+	"postCreateCommand": "echo 'Yocto Development Environment for Raspberry Pi 4 is ready!' && git --version && python3 --version",
+
+	// Set environment variables
+	"containerEnv": {
+		"BB_ENV_PASSTHROUGH_ADDITIONS": "SSTATE_DIR DL_DIR TMPDIR"
+	},
+
+	// Mount points for better performance (optional)
+	"mounts": [
+		"source=yocto-downloads,target=/workspaces/downloads,type=volume",
+		"source=yocto-sstate,target=/workspaces/sstate-cache,type=volume"
+	],
+
+	// Connect as non-root user
+	"remoteUser": "yocto"
+}
