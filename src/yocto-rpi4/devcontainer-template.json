@@ -1,0 +1,24 @@
+{
+    "id": "yocto-rpi4",
+    "version": "1.0.0",
+    "name": "Yocto + Raspberry Pi 4",
+    "description": "A complete Yocto Project development environment for Raspberry Pi 4",
+    "documentationURL": "https://github.com/BitByte08/yocto-dev-container/tree/main/src/yocto-rpi4",
+    "licenseURL": "https://github.com/BitByte08/yocto-dev-container/blob/main/LICENSE",
+    "options": {
+        "ubuntuVersion": {
+            "type": "string",
+            "description": "Ubuntu version for the base image (recommended: 22.04 for Yocto Kirkstone and later):",
+            "proposals": [
+                "22.04",
+                "20.04",
+                "18.04"
+            ],
+            "default": "22.04"
+        }
+    },
+    "platforms": [
+        "linux/amd64",
+        "linux/arm64"
+    ]
+}
