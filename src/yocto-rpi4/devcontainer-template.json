@@ -3,8 +3,8 @@
     "version": "1.0.0",
     "name": "Yocto + Raspberry Pi 4",
     "description": "A complete Yocto Project development environment for Raspberry Pi 4",
-    "documentationURL": "https://github.com/BitByte08/yocto-dev-container/tree/main/src/yocto-rpi4",
-    "licenseURL": "https://github.com/BitByte08/yocto-dev-container/blob/main/LICENSE",
+    "documentationURL": "https://github.com/devcontainers/template-starter/tree/main/src/yocto-rpi4",
+    "licenseURL": "https://github.com/devcontainers/template-starter/blob/main/LICENSE",
     "options": {
         "ubuntuVersion": {
             "type": "string",

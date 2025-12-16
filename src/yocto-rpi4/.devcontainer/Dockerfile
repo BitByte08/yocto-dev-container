@@ -57,7 +57,7 @@ RUN groupadd --gid $USER_GID $USERNAME \
 
 # Configure git for the user
 RUN mkdir -p /home/$USERNAME/.config/git && \
-    echo "[user]\n\tname = Yocto Developer\n\temail = yocto@developer.com\n[color]\n\tui = auto\n[safe]\n\tdirectory = *" > /home/$USERNAME/.gitconfig && \
+    echo "[user]\n\tname = Yocto Developer\n\temail = yocto@developer.com\n[color]\n\tui = auto" > /home/$USERNAME/.gitconfig && \
     chown -R $USERNAME:$USERNAME /home/$USERNAME
 
 # Set working directory
